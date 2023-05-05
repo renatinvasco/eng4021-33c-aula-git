@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+    <title>Página de testes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+</head>
+
+<body>
+  <h1> Renato Ribeiro Abreu Neto </h1>
+  <h2>VASCO DA GAMA</h2>
+  
+  <img width="150x50"  src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIIXdcCiJeA9bXfeQqq8BBbPwy1SzR1POOrgMHC3Ygg&s">
+  <br>
+
+  <b>Descrição:</b>
+  
+  <p>O Clube de Regatas Vasco da Gama é um time que surgiu em 1898 e que hoje tem como a sua principal modalidade o futebol masculino. Com diversos torcedores em todo o território nacional se tornou um dos clubes mais relevantes do país</p>
+  
+   <em>Maiores artilheiros da história do time de futebol:</em>
+  <ol>
+  {% for nom in artilheiro %}  
+    <li>{{ nom.nome}}</li>
+    <a href="/artilheiro/edit/{{nom.id}}">Editar</a>
+    <a href="/artilheiro/delete/{{nom.id}}">Remover</a>
+  {% endfor %}
+  </ol>
+  
+  <em>Lista de títulos oficiais nacionais da equipe:</em>
+  <ul>
+  {% for naci in nacional %}  
+    <li>
+      {{ naci.title}}
+      <a href="/nacional/edit/{{naci.id}}">Editar</a>
+      <a href="/nacional/delete/{{naci.id}}">Remover</a>
+    </li>
+  {% endfor %}
+</ul>
+
+  <big>Títulos internacionais:</big>
+
+  <table border="1">
+    <tr>
+        <td><strong>CAMPEONATO</strong></td>
+        <td><strong>ANO</strong></td>
+    </tr>
+    <tr>
+        <td>Campeonato Sul-Americano de Clubes</td>
+        <td>1948</td>
+    </tr>
+    <tr>
+        <td>Copa Libertadores da América</td>
+        <td>1998</td>
+    </tr>
+    <tr>
+        <td>Copa Mercosul</td>
+        <td>2000</td>
+    </tr>
+  </table>
+  
+  <img src="https://media.tenor.com/_0TzMJZezjkAAAAM/caze-dan%C3%A7ando-caze.gif" alt="this slowpoke moves"  width="250" />
+  <br>
+  
+  <i>Site oficial do clube:</i>
+  <a href="https://vasco.com.br/" target="_blanck">Clique aqui para acessar</a>
+
+
+  <br>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+<form method="POST">
+  {% csrf_token %}
+  Você tem certeza que deseja remover a titulo com id = {{ nacional.id }}
+  <input type="submit" name="confirma" value="Sim">
+  <input type="submit" value="Não">
+</form>

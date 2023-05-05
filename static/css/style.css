@@ -1,0 +1,23 @@
+
+
+h1{
+  font-family: 'Roboto',sans-serif;
+    color: #464649;
+  }
+h2{
+  font-family: 'Quicksand';
+    color: #fc0303;
+}
+p{
+  font-family: 'Sono';
+    color: #8d4ca4;
+}
+
+a{
+  font-family: 'Sofia Sans Semi Condensed';
+    color: #a1a843;
+}
+
+.enfase{
+  color: #0400ff;
+}

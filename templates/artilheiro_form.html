@@ -1,0 +1,21 @@
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Nome:</label><br>
+    <input type="text" name="Nome" value="{{ artilheiro.nome }}">
+  </div>
+  <div>
+    <label>Jogos:</label><br>
+    <input type="text" name="Jogos" value="{{ artilheiro.jogos }}">
+  </div>
+  <div>
+    <label>Gols:</label><br>
+    <input type="text" name="Gols" value="{{ artilheiro.gols }}">
+  </div>
+  <div>
+    <input type="checkbox" name="Títulos" {% if artilheiro.titulos == True %} checked {% endif %}>
+    <label>Títulos </label>
+  </div>
+  <br>
+  <input type="submit">
+</form>

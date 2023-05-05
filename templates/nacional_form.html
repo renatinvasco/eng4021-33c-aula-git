@@ -1,0 +1,21 @@
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Title:</label><br>
+    <input type="text" name="Title" value="{{ nacional.title }}">
+  </div>
+  <div>
+    <label>Ano:</label><br>
+    <input type="text" name="Ano" value="{{ nacional.ano }}">
+  </div>
+  <div>
+    <label>Tipo:</label><br>
+    <input type="text" name="Tipo" value="{{ nacional.tipo }}">
+  </div>
+  <div>
+    <input type="checkbox" name="Invicto" {% if nacional.invicto == True %} checked {% endif %}>
+    <label>Invicto </label>
+  </div>
+  <br>
+  <input type="submit">
+</form>
