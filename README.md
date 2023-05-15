@@ -4,15 +4,25 @@ O assunto escolhido foi o Club de Regatas Vasco da Gama.
 assim para começar o django utilizou-se na shell:
 
   python
+  
   import secrets
+  
   secrets.token_urlsafe(32)
+  
 assim consguindo uma chave e configurando a secret key, para rodar o código, depois usou-se
+
   python manage.py startapp appdorenatin
+  
 para se criar o app, em seguida
+
   python3 manage.py makemigrations
+  
   python3 manage.py migrate
+  
 para criar as migrações
+
   python manage.py createsuperuser
+  
 para criar o usuário do admin
 
   
